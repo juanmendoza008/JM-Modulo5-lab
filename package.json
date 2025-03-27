@@ -1,0 +1,23 @@
+{
+  "name": "jm-modulo5-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmendoza008/JM-Modulo5-lab.git"
+  },
+  "author": "JM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanmendoza008/JM-Modulo5-lab/issues"
+  },
+  "homepage": "https://github.com/juanmendoza008/JM-Modulo5-lab#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
