@@ -6,6 +6,8 @@ const testRoutes = require('./routes/testRoutes');
 const productRoutes = require('./routes/productRoutes');
 const calculatorRoutes = require('./routes/calculatorRoutes');
 const userRoutes = require('./routes/userRoutes');
+//Exercise 4
+const friendRoutes = require('./routes/friendRoutes');
 
 //Original 
 const app = express()
@@ -21,6 +23,8 @@ app.use('/mytest', testRoutes);
 app.use('/myProducts', productRoutes);
 app.use('/calculator', calculatorRoutes);
 app.use('/users', userRoutes);
+//Exercise 4
+app.use('/friends', friendRoutes);
 
 app.listen(port, () => {
 console.log(`Example app listening
