@@ -1,25 +1,33 @@
+// // Comments 2
+// const express = require('express')
+// // Asigning Route to get there 
+// const testRoutes = require('./routes/testRoutes');
+// const productRoutes = require('./routes/productRoutes');
+// const calculatorRoutes = require('./routes/calculatorRoutes');
+// const userRoutes = require('./routes/userRoutes');
 
-const express = require('express')
 // //Original 
-const app = express()
-const port = 3000
+// const app = express()
+// const port = 3000
 
-app.use("/",express.static("public"))
+// // parse requests of content-type - application/json
+// app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+// // Static one just print the default html page
+// app.use("/",express.static("public"))
+// // Choosing the One to use 
+// app.use('/mytest', testRoutes);
+// app.use('/myProducts', productRoutes);
+// app.use('/calculator', calculatorRoutes);
+// app.use('/users', userRoutes);
 
-app.get('/test', (req, res) => {
-    res.send('Hello World!')
-})
-
-app.listen(port, () => {
-console.log(`Example app listening
-at http://localhost:${port}`)
-})
+// app.listen(port, () => {
+// console.log(`Example app listening
+// at http://localhost:${port}`)
+// })
 
 
+// Comments 1 
 // //Hazel solutions constructor diferent app and port
 // class App{ 
 //     constructor(port,route,endpoint){
@@ -43,3 +51,13 @@ at http://localhost:${port}`)
 // new App(3003,"/character",(req,res) => {
 //     res.send([{id:1,name:"IroMan",sport:"Finance"}])
 // })
+
+// index.js - updated version
+// import the app
+const app = require('./app');
+const port = 3000
+// start the app to listen on the right port
+app.listen(port, () => {
+console.log(`Example app listening at
+http://localhost:${port}`)
+})
