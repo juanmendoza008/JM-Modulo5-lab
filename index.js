@@ -13,6 +13,10 @@ const friendRoutes = require('./routes/friendRoutes');
 const app = express()
 const port = 3000
 
+//Swagger
+const swaggerUi = require('swagger-ui-express');
+swaggerDocument = require('./swagger.json');
+
 // parse requests of content-type - application/json
 app.use(express.json());
 
@@ -23,8 +27,13 @@ app.use('/mytest', testRoutes);
 app.use('/myProducts', productRoutes);
 app.use('/calculator', calculatorRoutes);
 app.use('/users', userRoutes);
+
 //Exercise 4
 app.use('/friends', friendRoutes);
+
+//Swagger
+app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocument)
+);
 
 app.listen(port, () => {
 console.log(`Example app listening

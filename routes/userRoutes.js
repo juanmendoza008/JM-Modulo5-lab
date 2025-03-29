@@ -9,6 +9,11 @@ const users = [
 {id: 4, name: 'Lee Hsien Loong', country: 'SG'}
 ]
 
+// Get Users
+router.get('/', (req, res) => {
+    res.json(users)
+})
+
 // get information about this request from the headers
 router.get('/headers', (req, res) => {
     console.log(req.headers)
@@ -19,10 +24,10 @@ router.get('/headers', (req, res) => {
 router.get('/:id', (req, res) => {
     console.log(req.params)
     let userId = req.params.id; // 'id' will be a valuematching anything after the / in the request path
+    
     let user = users.find(user => user.id == userId)
     user ? res.status(200).json({result: user})
-        : res.status(404).json({result:
-        `User ${userId} not found`})
+        : res.status(404).json({result:`User ${userId} not found`})
 })
 
 
@@ -43,7 +48,5 @@ router.post('/', (req, res) => {
     console.log(users)
     res.status(200).json(newUser) // return the new user
 });
-
-
 
 module.exports = router;
