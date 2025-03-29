@@ -1,3 +1,4 @@
+// Lab 2 & 3
 const addNumbers = (req, res) => {
     if(!req.query?.num1 || !req.query?.num2){
         res.status(422);

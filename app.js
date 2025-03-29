@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+//Lab1 
 // map all routes to the express app
 const calculatorRoutes = require("./routes/calculatorRoutes");
 const testRoutes = require("./routes/testRoutes");
@@ -13,3 +14,4 @@ app.use("/user", userRoutes);
 
 // export the app
 module.exports = app;
+

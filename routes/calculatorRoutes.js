@@ -1,3 +1,4 @@
+//Lab 2 & 3
 const express = require('express');
 
 const calculatorController = require('../controllers/calculatorController')
@@ -20,7 +21,7 @@ router.get('/divide', (req, res) => {
     calculatorController.divNumbers(req,res)
 })
 
-// Operation withput the controller
+// Operation without the controller
 // router.get('/add', (req, res) => {
 //     let number1 = parseInt(req.query?.num1) || 0;
 //     let number2 = parseInt(req.query?.num2) || 0;
